@@ -1,5 +1,6 @@
-public class Manager extends Employee {
-        private int count;
+public final class Manager extends BaseEmployee {
+
+    public int count;
 
     public Manager(int age, String name, String gender, int daySalary, int count) {
         super(age, name, gender, daySalary);
@@ -9,6 +10,7 @@ public class Manager extends Employee {
     public int getCount() {
         return count;
     }
+
     public void setCount(int count) {
         this.count = count;
     }
@@ -16,6 +18,6 @@ public class Manager extends Employee {
     @Override
     public int getSalary(Month[] monthArray) {
         int sum = super.getSalary(monthArray);
-        return sum + (int)(sum * count/100.0);
+        return sum + (int)(sum * count / 100.0);
     }
 }
