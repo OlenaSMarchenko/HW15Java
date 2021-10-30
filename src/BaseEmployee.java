@@ -1,4 +1,4 @@
-public abstract class BaseEmployee {
+public abstract class BaseEmployee { //Необходимо создать базовый абстрактный класс BaseEmployee как общего родителя
 
     private int age;
     private String name;
@@ -42,7 +42,7 @@ public abstract class BaseEmployee {
         this.daySalary = daySalary;
     }
 
-    public int getSalary(Month[] monthArray) {
+    public int getSalary(IMonth[] monthArray) {
         int sum = 0;
         for (int i = 0; i < monthArray.length; i++) {
             sum += getDaySalary() * monthArray[i].getWorkDays();

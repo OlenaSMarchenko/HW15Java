@@ -1,4 +1,5 @@
-public final class Manager extends BaseEmployee {
+public final class Manager extends BaseEmployee {  //Классы Employee и Manager должны быть финальными
+
 
     public int count;
 
@@ -16,7 +17,7 @@ public final class Manager extends BaseEmployee {
     }
 
     @Override
-    public int getSalary(Month[] monthArray) {
+    public int getSalary(IMonth[] monthArray) {
         int sum = super.getSalary(monthArray);
         return sum + (int)(sum * count / 100.0);
     }
